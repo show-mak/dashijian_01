@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件 - 登陆页面</title>
+    <!-- 先引入layui样式 -->
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <!-- 再引入本页面样式 -->
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="layui-main header">
+        <img src="assets/images/logo.png" alt="">
+    </div>
+    <!-- 注册和登陆区域 -->
+
+    <div class="loginAndRegBox">
+        <!-- 标题区 -->
+        <div class="titleBox">
+            <h2>后台管理系统</h2>
+        </div>
+        <!-- 登录区 -->
+        <div class="login-box">
+            <!-- <h1>登录界面模块</h1> -->
+            <form class="layui-form" id="form_login">
+                <div class="layui-form-item">
+                    <!-- 用户名 -->
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        value="999999999" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <!-- 密码 -->
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        value="9999999999" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <!-- 提交按钮 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-radius layui-btn-normal" lay-submit
+                        lay-filter="formDemo">登录</button>
+                </div>
+                <div class="layui-form-item links">
+                    <!-- 切换注册界面 -->
+                    <a href="javascript:;" id="link-reg" style="color: #fff">去注册账号</a>
+                </div>
+            </form>
+
+        </div>
+        <!-- 注册区 -->
+        <div class="reg-box" style="display :none">
+            <form class="layui-form" id="form_reg">
+                <div class="layui-form-item">
+                    <!-- 用户名 -->
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <!-- 密码 -->
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="text" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <!-- 再次确认密码 -->
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="text" name="repassword" required lay-verify="required|pwd|repwd" placeholder="请重新输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <!-- 提交按钮 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-radius layui-btn-normal" lay-submit
+                        lay-filter="formDemo">提交注册</button>
+                </div>
+                <div class="layui-form-item links">
+                    <!-- <h1>注册区域模块</h1> -->
+                    <a href="javascript:;" id="link-login" style="color: #333">已有帐户,去登录</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 先引入JQ -->
+    <script src="assets/lib/jquery.js"></script>
+    <!-- 引入layui.js -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 引入baseAPI文件  -->
+    <script src="assets/js/baseAPI.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>
