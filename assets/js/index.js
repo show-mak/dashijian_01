@@ -1,5 +1,5 @@
 $(function () {
-    getUserInof();
+    getUserInfo();
 
     //2.注销功能 
     let layer = layui.layer;
@@ -18,12 +18,9 @@ $(function () {
     })
 })
 
-
 //登录
 
-
-
-function getUserInof() {
+function getUserInfo() {
     $.ajax({
         url: '/my/userinfo',
         //请求头直接设置在baseAPI文件中

@@ -17,14 +17,11 @@ $.ajaxPrefilter(function (options) {
         //无论请求成功还是失败都会启动complete方法
         //登录拦截
         options.complete = function (res) {
-            console.log(res.responseJSON);
+            // console.log(res.responseJSON);
             let obj = res.responseJSON;
-            let timeId = null;
             if (obj.status == '1' && obj.message == '身份认证失败！') {
                 //跳转到登录界面并且销毁token
-                timeId = setInterval(function () {
-                    location.href = '/login.html';
-                }, 2)
+                location.href = '/login.html';
                 localStorage.removeItem('token');
             }
         }

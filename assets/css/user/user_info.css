@@ -1,0 +1,11 @@
+body {
+    padding: 15px;
+    margin: 0;
+    background-color: #ccf;
+}
+
+form {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+}
