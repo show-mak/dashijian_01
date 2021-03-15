@@ -67,18 +67,20 @@ $(function () {
             type: 'POST',
             data: $(this).serialize(),
             success: (res) => {
-                if (res.status != 0) {
+                if (res.status !== 0) {
                     layer.ready(function () {
-                        layer.msg('客官,掏钱才能进哦!哦!哦!');
+                        layer.msg('密码或用户名错误');
+                        return
                     });
+                } else {
+                    layer.ready(function () {
+                        layer.msg('客观!欢迎光临');
+                    });
+                    // 跳转页面
+                    location.href = '/index.html';
+                    localStorage.setItem("token", res.token);
                 }
-                layer.ready(function () {
-                    layer.msg('客观!欢迎光临');
 
-                });
-                // 跳转页面
-                location.href = '/index.html';
-                localStorage.setItem('token', res.token);
             }
         })
 
