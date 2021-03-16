@@ -2,7 +2,7 @@
 //window.onload 外部的文件和图片音频视频等 全部加载完毕再执行
 $(window).on('load', function () {
     // 1.1 获取裁剪区域的 DOM 元素
-    var $image = $('#image')
+    let $image = $('#image')
     // 1.2 配置选项
     const options = {
         // 纵横比
